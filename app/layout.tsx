@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import ToastContainer from "@/components/ToastContainer";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Solana Next.js Template",
+  title: "Poirot",
   description: "A template for creating Solana dApps with Next.js",
 };
 

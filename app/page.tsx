@@ -3,6 +3,7 @@ import { useWalletNfts } from "@/hooks/useWalletNfts";
 import { Nft } from "@metaplex-foundation/js";
 import { useWallet } from "@solana/wallet-adapter-react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState } from "react";
 
 // Dynamically import components
@@ -10,13 +11,35 @@ const NftSelect = dynamic(() => import("./components/NftSelect"), {
   ssr: false,
 });
 
+const dummyAudits = [
+  {
+    logo: "/one.png",
+    title: "Audit #1",
+    desc: "This is the first audit on the Poirot platform.",
+  },
+  {
+    logo: "/two.jpg",
+    title: "Audit #2",
+    desc: "This is the second audit on the Poirot platform.",
+  },
+  {
+    logo: "/three.png",
+    title: "Audit #3",
+    desc: "This is the third audit on the Poirot platform.",
+  },
+  {
+    logo: "/four.png",
+    title: "Audit #4",
+    desc: "This is the fourth audit on the Poirot platform.",
+  },
+]
+
 export default function Home() {
   const { connected, publicKey } = useWallet();
   // const [publicKey, setPublicKey] = useState<PublicKey | undefined>();
-  const { nfts, loading } = useWalletNfts(publicKey || undefined);
-  const [selectedNfts, setSelectedNfts] = useState<Nft[]>([]);
 
   return (
+    /*
     <div className="m-auto flex w-full flex-col items-center space-y-10 py-10 xl:w-1/2">
       <a
         href="https://github.com/lucasig11/solana-next-template/generate"
@@ -29,32 +52,24 @@ export default function Home() {
         </svg>
         <p className="m-auto">Use this template</p>
       </a>
+      */
 
-      {/*<div className="flex w-full rounded-md bg-gray-800 px-4 py-2 text-lg text-sky-100">
-        <input
-          type="text"
-          onSubmit={() => setWallet("")}
-          className="w-full bg-transparent outline-none"
-          placeholder="Search..."
-        />
-        <MagnifyingGlassIcon className="h-6 w-6 fill-sky-100" />
-      </div>*/}
-
+    <div className="flex w-full flex-col items-center space-y-2">
+      <h1 className="text-3xl font-bold text-white-900 mt-10">Audits</h1>
       <div className="flex w-full flex-col items-center space-y-2">
-        {connected && (
-          <>
-            <h1 className="text-3xl font-bold text-gray-900">NFT Select</h1>
-            <NftSelect
-              multiple
-              text={loading ? "Loading..." : "Select NFTs..."}
-              nfts={nfts}
-              value={selectedNfts}
-              onChange={setSelectedNfts}
-              disabled={loading || nfts.length === 0}
-            />
-          </>
-        )}
+        {dummyAudits.map((audit, index) => (
+          <div key={index} className="flex w-full items-center space-x-4 mt-8">
+            <div className="flex items-center justify-center mt-4">
+              <Image src={audit.logo} alt={audit.title} width={48} height={48} />
+            </div>
+            <div className="flex flex-col mt-4">
+              <h2 className="text-2xl font-bold text-white-900">{audit.title}</h2>
+              <p className="text-lg text-white-700">{audit.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
+
   );
 }
