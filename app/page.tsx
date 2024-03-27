@@ -14,22 +14,22 @@ const NftSelect = dynamic(() => import("./components/NftSelect"), {
 const dummyAudits = [
   {
     logo: "/one.png",
-    title: "Audit #1",
+    title: "Prevara1 #1",
     desc: "This is the first audit on the Poirot platform.",
   },
   {
     logo: "/two.jpg",
-    title: "Audit #2",
+    title: "Prevara2 #2",
     desc: "This is the second audit on the Poirot platform.",
   },
   {
     logo: "/three.png",
-    title: "Audit #3",
+    title: "PRevara3 #3",
     desc: "This is the third audit on the Poirot platform.",
   },
   {
     logo: "/four.png",
-    title: "Audit #4",
+    title: "Prevara4 #4",
     desc: "This is the fourth audit on the Poirot platform.",
   },
 ]
@@ -55,7 +55,7 @@ export default function Home() {
       */
 
     <div className="flex w-full flex-col items-center space-y-2">
-      <h1 className="text-3xl font-bold text-white-900 mt-10">Audits</h1>
+      <h1 className="text-3xl font-bold text-white-900 mt-10">Prevare solutions</h1>
       <div className="flex w-full flex-col items-center space-y-2">
         {dummyAudits.map((audit, index) => (
           <div key={index} className="flex w-full items-center space-x-4 mt-8">
