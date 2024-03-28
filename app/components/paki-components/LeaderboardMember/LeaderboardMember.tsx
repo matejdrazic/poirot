@@ -25,9 +25,9 @@ const LeaderboardMember : React.FC<LeaderboardMemberProps> = ({ memberNumber, me
                 <img className={Style.LeaderboardMemberInfoProfilePhoto} src={memberProfilePhoto}></img>
                 <div className={Style.LeaderboardMemberInfoMember}>{memberUsername}</div>
             </div>
-            <div>{memberPoints}</div>
-            <div>{memberDays}</div>
-            <div>{memberPayouts}</div>
+            <div className={Style.LeaderboardMemberInfoMember}>{memberPoints}</div>
+            <div className={Style.LeaderboardMemberInfoMember}>{memberDays}</div>
+            <div className={Style.LeaderboardMemberInfoMember}>{memberPayouts}</div>
         </div>
     );
 }

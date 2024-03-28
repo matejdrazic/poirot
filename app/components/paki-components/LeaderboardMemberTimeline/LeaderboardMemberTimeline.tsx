@@ -21,7 +21,7 @@ const LeaderboardMemberTimeline : React.FC<LeaderboardMemberProps> = ({ memberPr
                 <img className={Style.LeaderboardMemberTimelineInfoProfilePhoto} src={memberProfilePhoto}></img>
                 <div className={Style.LeaderboardMemberTimelineInfoMember}>{memberUsername}</div>
             </div>
-            <div>{memberStatus}</div>
+            <div className={Style.LeaderboardMemberTimelineInfoMember}>{memberStatus}</div>
         </div>
     );
 }
