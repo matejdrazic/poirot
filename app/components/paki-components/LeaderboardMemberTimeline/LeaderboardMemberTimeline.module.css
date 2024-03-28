@@ -9,6 +9,7 @@
 
 .LeaderboardMemberTimelineContainer:hover {
     background-color: #480f7b;
+    transform: scale(1.05);
 }
 
 .LeaderboardMemberTimelineInfo {
@@ -21,6 +22,7 @@
 .LeaderboardMemberTimelineInfoMember {
     margin-left: 4px;
     margin-right: 4px;
+    color: #ffffff;
 }
 
 .LeaderboardMemberTimelineInfoProfilePhoto {

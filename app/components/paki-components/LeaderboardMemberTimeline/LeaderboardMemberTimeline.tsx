@@ -16,13 +16,13 @@ const LeaderboardMemberTimeline : React.FC<LeaderboardMemberProps> = ({ memberPr
     
     
     return (  
-        <div className={Style.LeaderboardMemberTimelineContainer}>
+        <button className={Style.LeaderboardMemberTimelineContainer}>
             <div className={Style.LeaderboardMemberTimelineInfo}>
                 <img className={Style.LeaderboardMemberTimelineInfoProfilePhoto} src={memberProfilePhoto}></img>
                 <div className={Style.LeaderboardMemberTimelineInfoMember}>{memberUsername}</div>
             </div>
             <div className={Style.LeaderboardMemberTimelineInfoMember}>{memberStatus}</div>
-        </div>
+        </button>
     );
 }
  
