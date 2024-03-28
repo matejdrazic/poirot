@@ -1,0 +1,28 @@
+.LeaderboardMemberContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 15px 8px 15px;
+    margin: 10px 0px 10px 0;
+    background-color: #280745;
+}
+
+.LeaderboardMemberContainer:hover {
+    background-color: #480f7b;
+}
+
+.LeaderboardMemberInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.LeaderboardMemberInfoMember {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.LeaderboardMemberInfoProfilePhoto {
+    height: 50px;
+    width: 50x;
+}

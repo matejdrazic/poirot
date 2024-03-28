@@ -1,7 +1,7 @@
 const AuditContest = () => {
     return ( 
         <div>
-            Cula
+            
         </div>
      );
 }
