@@ -1,5 +1,5 @@
-"use client";
-import { truncatePublicKey } from "@/utils/truncatePublicKey";
+"use client"
+import React, { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   ArrowRightOnRectangleIcon,
@@ -11,7 +11,7 @@ import {
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import Image from "next/image";
-import { Fragment, useEffect, useState } from "react";
+import { truncatePublicKey } from "@/utils/truncatePublicKey";
 
 /* Wallet button, for now used only in the mobile menu */
 const WalletMultiButton = ({ className = "" }) => {
@@ -38,7 +38,7 @@ const WalletMultiButton = ({ className = "" }) => {
         onClick={openModal}
         className={
           className +
-          " m-0 flex items-center justify-evenly rounded-lg p-2 text-sm text-gray-800 hover:bg-gray-200 "
+          " m-0 flex items-center justify-evenly rounded-lg p-2 text-sm text-gray-800 hover:bg-gray-200 bg-white"
         }
       >
         <WalletIcon className="mr-2 h-5 w-5" />
@@ -47,14 +47,12 @@ const WalletMultiButton = ({ className = "" }) => {
     );
   }
 
-  // TODO: add connecting state
-
   return (
     <Popover>
       <Popover.Button
         className={
           className +
-          " flex items-center gap-2 rounded-lg p-2 text-sm text-gray-800 hover:bg-gray-200"
+          " flex items-center gap-2 rounded-lg p-2 text-sm text-gray-800 hover:bg-gray-200 bg-white"
         }
       >
         <Image
@@ -69,11 +67,11 @@ const WalletMultiButton = ({ className = "" }) => {
         </p>
       </Popover.Button>
       <ScaleAndFadeTransition>
-        <Popover.Panel className="absolute mt-4 w-48 divide-y divide-gray-100 rounded-md bg-gray-50 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Popover.Panel className="absolute mt-4 w-48 divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="p-1 ">
             <button
               onClick={handleCopy}
-              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200"
+              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200 bg-white"
             >
               {copied ? (
                 <ClipboardDocumentCheckIcon className="mr-2 h-5 w-5" />
@@ -84,14 +82,14 @@ const WalletMultiButton = ({ className = "" }) => {
             </button>
             <button
               onClick={openModal}
-              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200"
+              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200 bg-white"
             >
               <ArrowsRightLeftIcon className="mr-2 h-5 w-5" />
               Change wallet...
             </button>
             <button
               onClick={disconnect}
-              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200"
+              className="flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-800 hover:bg-gray-200 bg-white"
             >
               <ArrowRightOnRectangleIcon className="mr-2 h-5 w-5" />
               Disconnect
@@ -103,7 +101,7 @@ const WalletMultiButton = ({ className = "" }) => {
   );
 };
 
-const ScaleAndFadeTransition = ({ children }: React.PropsWithChildren) => (
+const ScaleAndFadeTransition = ({ children }:React.PropsWithChildren) => (
   <Transition
     as={Fragment}
     enter="transition ease-out duration-100"
