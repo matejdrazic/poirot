@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import Logo from './HomePageComponents/Logo'
-import WalletMultiButton from './WalletMultiButton';
+import Logo from './Logo';
+import WalletMultiButton from '../WalletMultiButton';
 const Header = () => {
   // State to control the visibility of the menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);

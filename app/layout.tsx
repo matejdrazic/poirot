@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
+import Header from "@/components/HomePageComponents/Header";
 import ToastContainer from "@/components/ToastContainer";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/HomePageComponents/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ const WalletProvider = dynamic(() => import("./components/WalletProvider"), {
   ssr: false,
 });
 
+
 export default function RootLayout({
   children,
 }: {
@@ -25,12 +26,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <WalletProvider>
-          <Header title={metadata.title} />
+          <Header/>
           <main className="min-h-screen p-16">
             {children}
             <ToastContainer theme="colored" />
           </main>
         </WalletProvider>
+        <Footer/>
       </body>
     </html>
   );
