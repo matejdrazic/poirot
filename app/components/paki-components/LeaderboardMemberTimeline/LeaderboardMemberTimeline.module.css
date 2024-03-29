@@ -1,0 +1,31 @@
+.LeaderboardMemberTimelineContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 15px 8px 15px;
+    margin: 10px 0px 10px 0;
+    background-color: #280745;
+}
+
+.LeaderboardMemberTimelineContainer:hover {
+    background-color: #480f7b;
+    transform: scale(1.05);
+}
+
+.LeaderboardMemberTimelineInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffffff
+}
+
+.LeaderboardMemberTimelineInfoMember {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #ffffff;
+}
+
+.LeaderboardMemberTimelineInfoProfilePhoto {
+    height: 50px;
+    width: 50x;
+}

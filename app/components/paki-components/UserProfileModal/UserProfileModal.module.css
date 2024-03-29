@@ -1,0 +1,39 @@
+.ModalContainerOverlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #00000092;
+    z-index: 1000;
+}
+
+.Modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1C0333;
+    width: 60%;
+    height: 80%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.ModalTopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.CloseModal {
+    color: #ffffff;
+    font-weight: bold;
+}
+
