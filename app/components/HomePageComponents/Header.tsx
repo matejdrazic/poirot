@@ -43,7 +43,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className='mt-2'>
-                <Link href={"/audit-contest"}>
+                <Link href={"/audit-contests"}>
                   Audits
                 </Link>
               </li>
