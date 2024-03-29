@@ -36,12 +36,12 @@ const testimonials = [
 
 export default function Testimonials() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 10000, stopOnInteraction: true })
   )
   return (
     <>
     <div className="mt-16 flex flex-col items-center justify-center">
-      <h1 className="mb-4 ml-4 bg-gradient-to-r from-green-800  to-green-400 font-bold inline-block text-transparent bg-clip-text text-2xl">Hear from our Customers</h1>
+      <h1 className="mb-4 ml-4 bg-gradient-to-r from-indigo-800 to-purple-400 font-bold inline-block text-transparent bg-clip-text text-6xl">Hear from our Customers</h1>
       <p className="text-center text-3xl my-12 font-bold">Customers who entrust their security to Poirot</p>
     </div>
     <Carousel className="w-full mx-auto max-w-xs mb-36"   plugins={[plugin.current]}>

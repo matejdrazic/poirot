@@ -9,7 +9,7 @@ const Logo = () => {
         width={50}
         height={100}
         alt='logo-image'
-        className='mix-blend-hard-dodge'
+        className='mix-blend-saturation'
     />
   )
 }
