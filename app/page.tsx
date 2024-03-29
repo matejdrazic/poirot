@@ -22,12 +22,13 @@ export default function Home() {
 
   return (
     <>
-      <Hero/>
-      <Story/>
-      <Testimonials/>
-      <AnimatedFeatures/>
-      <RequestAudit/>
-      <FrequentlyAsked/>
+      
+        <Hero/>
+        <Story/>
+        <Testimonials/>
+        <AnimatedFeatures/>
+        <FrequentlyAsked/>
+        <RequestAudit/>
     </>
   );
 }

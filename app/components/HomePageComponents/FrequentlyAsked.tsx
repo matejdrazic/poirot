@@ -16,20 +16,24 @@ export function ButtonOutline() {
 export default function FrequentlyAsked() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-24">
+      <div className="flex flex-row gap-4">
+        <p className="text-2xl mx-4 font-bold mb-12">Find out more about Poirot</p>
+        <Button variant="outline" size="icon">
+          <ChevronRight className="h-4 w-4" />
+        </Button>
+      </div>
+      <div className="flex flex-col lg:flex-row-reverse gap-24">
         <div className="flex flex-col items-center justify-evenly lg:w-6/12  mx-auto rounded-lg overflow-hidden bg-transparent">
           <div className="flex flex-col items-center justify-center gap-4 w-fit">
-            <p className="text-2xl mx-4 font-bold">Find out more about Poirot</p>
-            <Button variant="outline" size="icon">
-              <ChevronRight className="h-4 w-4" />
-            </Button>
+           
           </div>
           <Image
             src={cirlcesScatter}
             alt="faq-design"
-            className="mix-blend-dodge"
+            className="w-11/12"
           />
         </div>
+
 
         <Accordion type="single" collapsible className="w-full lg:w-6/12">
           <AccordionItem value="item-1">
@@ -50,6 +54,18 @@ export default function FrequentlyAsked() {
             <AccordionContent>
               Yes. It&apos;s animated by default, but you can disable it if you
               prefer.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Is it safe?</AccordionTrigger>
+            <AccordionContent>
+              Yes. We ensure top safety.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Is it safe?</AccordionTrigger>
+            <AccordionContent>
+              Yes. We ensure top safety.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
