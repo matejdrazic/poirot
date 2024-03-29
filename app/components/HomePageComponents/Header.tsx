@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
 import WalletMultiButton from '../WalletMultiButton';
+import Link from 'next/link';
+
+
 const Header = () => {
   // State to control the visibility of the menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +18,10 @@ const Header = () => {
     <>
       <nav className="bg-transparent border-gray-200 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <Link href={"/"} className="flex items-center space-x-3 rtl:space-x-reverse">
             <Logo/>
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Poirot</span>
-          </a>
+          </Link>
           <button
             onClick={toggleMenu} 
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -35,13 +38,19 @@ const Header = () => {
           >
             <ul className="flex flex-col gap-4 font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
               <li className='mt-2'>
-                <a href="#"  aria-current="page">Home</a>
+                <Link href={"/"}>
+                  Home
+                </Link>
               </li>
               <li className='mt-2'>
-                <a href="#"  aria-current="page">Audits</a>
+                <Link href={"/audit-contest"}>
+                  Audits
+                </Link>
               </li>
               <li className='mt-2'>
-                <a href="#"  aria-current="page">Leaderboards</a>
+                <Link href={"/audit-leaderboard"}>
+                  Leaderboard
+                </Link>
               </li>
               <li>
                 <WalletMultiButton/>

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Poirot",
-  description: "A template for creating Solana dApps with Next.js",
+  description: "Poirot - a decentralized application (dApp) on the Solana ecosystem using the Next.js framework",
 };
 
 const WalletProvider = dynamic(() => import("./components/WalletProvider"), {
