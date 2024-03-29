@@ -44,8 +44,8 @@ const RequestAudit = () => {
 
   return (
     <>
-      <section className='flex flex-col items-center justify-center mb-36'>
-        <div style={{ position: 'relative', width: '400px', height: '400px' }}>
+      <section className='flex flex-col items-center justify-center mt-72 mb-12'>
+        <div style={{ position: 'relative', width: '400px', height: '400px'}}>
           <canvas ref={canvasRef} width={400} height={400} style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }} />
           <div style={{ width:'', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '20px', borderRadius: '8px' }}>
             <RequestAuditContent/>
