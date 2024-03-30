@@ -9,6 +9,9 @@ import Style from './UserProfileModal.module.css'
 import { AuditLeaderboardContext } from '../../../audit-leaderboard/AuditLeaderboardContext';
 // external components
 
+// my components
+import UserProfileStatsElement from './UserProfileComponents/UserProfileStatsElement/UserProfileStatsElement'
+
 const data = {
         profilePhoto : "/one.png",
         username : "username",
@@ -45,31 +48,22 @@ const ModalUpdateProjectInfo = () => {
                         <img src={data.profilePhoto} className={Style.UserProfileProfilePhoto} />
                         <div className={Style.UserProfileUsername}>{data.username}</div>
                         <div className={Style.UserProfileRole}>senior</div>
-                        <div>
                         <div className={Style.UserProfileIssues}>
                             <div className={Style.UserProfileRecentIssues}>Recent issues</div>
                             <div className={Style.UserProfileStats}>
                                 <div className={Style.UserProfileIssuesStatsSection}>
-                                    <div className={Style.UserProfileIssuesStatsElement}>
-                                        <div className={Style.UserProfileIssuesStatsElementTitle}>
-                                            High severity Issues
-                                        </div>
-                                        <div className={Style.UserProfileIssuesStatsElementValue}>
-                                            7
-                                        </div>
-                                    </div>
-                                    <div className={Style.UserProfileIssuesStatsElement}>2</div>
-                                    <div className={Style.UserProfileIssuesStatsElement}>3</div>
+                                    <UserProfileStatsElement title={"High Severity Issues"} value={"5"}/>
+                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"7"}/>
+                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"8"}/>
                                 </div>
                                 <div className={Style.UserProfileIssuesStatsSection}>
-                                    <div className={Style.UserProfileIssuesStatsElement}>4</div>
-                                    <div className={Style.UserProfileIssuesStatsElement}>5</div>
-                                    <div className={Style.UserProfileIssuesStatsElement}>6</div>
+                                    <UserProfileStatsElement title={"Solo High"} value={"3"}/>
+                                    <UserProfileStatsElement title={"Solo Medium"} value={"3"}/>
+                                    <UserProfileStatsElement title={"First Place"} value={"9"}/>
                                 </div>
                             </div>
                             <div style={Style.UserProfileRewards}>213</div>
                             <div style={Style.UserProfileTopResults}>TOP LEADER</div>
-                        </div>
                         </div>
                     </div>
 

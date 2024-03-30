@@ -16,13 +16,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #ffffff
 }
 
 .LeaderboardMemberTimelineInfoMember {
     margin-left: 4px;
     margin-right: 4px;
-    color: #ffffff;
 }
 
 .LeaderboardMemberTimelineInfoProfilePhoto {

@@ -1,0 +1,9 @@
+.UserProfileIssuesStatsElement {
+    align-self: flex-start;
+}
+
+.UserProfileIssuesStatsElementTitle {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #D1D5DB;
+}
