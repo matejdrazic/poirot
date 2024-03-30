@@ -18,7 +18,6 @@
 .Modal {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #1C0333;
     width: 60%;
     height: 80%;
@@ -37,3 +36,68 @@
     font-weight: bold;
 }
 
+/* USER PROFILE ELEMENTS */
+
+.UserProfileContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.UserProfileFirstSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UserProfileRecentIssues {
+
+}
+
+.UserProfileProfilePhoto{
+    height: 200px;
+    width: 200px;
+}
+
+.UserProfileUsername {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.UserProfileRole {
+    background-color: #9B3BF2;
+    padding: 3px 8px 3px 8px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.UserProfileSecondSection {
+    display: flex;
+    flex-direction: column;
+    flex : 1;
+}
+
+.UserProfileStats {
+    display: flex;
+    flex-direction: row;
+}
+
+.UserProfileIssuesStatsSection {
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.UserProfileIssuesStatsElement {
+    align-self: flex-start;
+}
+
+.UserProfileIssuesStatsElementTitle {
+    font-size: .875rem;
+}
+
+.UserProfileSecondSection {
+    flex: 3;
+}

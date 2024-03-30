@@ -5,6 +5,7 @@
     padding: 8px 15px 8px 15px;
     margin: 10px 0px 10px 0;
     background-color: #280745;
+    align-items: center;
 }
 
 .LeaderboardMemberContainer:hover {

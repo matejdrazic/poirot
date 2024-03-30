@@ -1,5 +1,6 @@
 'use client'
 
+
 import React, { useState, useEffect } from "react";
 
 // style
@@ -20,7 +21,7 @@ import  { AuditLeaderboardContext } from './AuditLeaderboardContext.js'
 const AuditLeaderboard = () => {
 
     // user profile modal
-    const [userProfileIsOpen, setUserProfileIsOpen] = useState(false);
+    const [userProfileIsOpen, setUserProfileIsOpen] = useState(true);
 
     useEffect(() => {
         if (userProfileIsOpen) {

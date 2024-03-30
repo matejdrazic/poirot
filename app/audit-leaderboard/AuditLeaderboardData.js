@@ -1,7 +1,7 @@
 const Data = [
     {
         image: "/one.png",
-        username: "Matej Drazi",
+        username: "Matej Drazic",
         points : "100",
         days : "23",
         payouts : "28,000 BAM"
