@@ -9,6 +9,7 @@ import Testimonials from "./components/HomePageComponents/Testimonials";
 import Story from "./components/HomePageComponents/Story";
 import AnimatedFeatures from "./components/HomePageComponents/AnimatedFeatures";
 import RequestAudit from "./components/HomePageComponents/RequestAudit";
+import HomeAudits from "./components/HomePageComponents/HomeAudits";
 
 // Dynamically import components
 const NftSelect = dynamic(() => import("./components/NftSelect"), {
@@ -25,6 +26,7 @@ export default function Home() {
       
         <Hero/>
         <Story/>
+        <HomeAudits/>
         <Testimonials/>
         <AnimatedFeatures/>
         <FrequentlyAsked/>
