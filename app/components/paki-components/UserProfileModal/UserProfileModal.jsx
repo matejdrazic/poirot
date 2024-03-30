@@ -14,6 +14,13 @@ import UserProfileStatsElement from './UserProfileComponents/UserProfileStatsEle
 import UserProfileRewards from './UserProfileComponents/UserProfileRewards/UserProfileRewards'
 import topLeader from '../Resources/top_leader.png'
 import achievement1 from '../Resources/achievements/achievement1.png'
+import achievement2 from '../Resources/achievements/achievement2.png'
+import achievement3 from '../Resources/achievements/achievement3.png'
+import achievement4 from '../Resources/achievements/achievement4.png'
+
+// components
+import Image from "next/image";
+import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
 
 
 const data = {
@@ -86,10 +93,20 @@ const ModalUpdateProjectInfo = () => {
                     </div>
 
                     <div className={Style.UserProfileSecondSection}>
-                        <div style={Style.UserProfileMilestones}>
-                            <div style={Style.UserProfileMilestone}></div>
+                        <div className={Style.UserProfileAchievementsTitle}>ACHIEVEMENTS</div>
+                        <div className={Style.UserProfileAchievementsList}>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement2} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement4} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement4} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement2} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
+                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
                         </div>
-                        <img src={achievement1} height={200} width={200}/>
                         <div className={Style.UserProfileResume}>
                             <div>Event</div>
                         </div>

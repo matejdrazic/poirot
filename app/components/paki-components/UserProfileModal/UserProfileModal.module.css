@@ -114,12 +114,24 @@
     margin-right: 10px;
 }
 
-
-
 .UserProfileSecondSection {
     flex : 2.5;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
+}
+
+.UserProfileAchievementsTitle {
+    margin-bottom: 10px;
+}
+
+.UserProfileAchievementsList {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+}
+
+.UserProfileAchievementsListImage {
+    margin: 0px 10px 0px 10px;
 }
