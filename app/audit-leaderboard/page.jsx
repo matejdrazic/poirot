@@ -56,19 +56,7 @@ const AuditLeaderboard = () => {
                     ))}    
                     
                 </div>      
-                <div className={Style.AuditLeaderboardTimeline}>
-                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>TIMELINE</h2>
-                    <div className={Style.AuditLeaderboardTopBar}>
-                    </div>
-                    {TimelineData.map((member, index) => (
-                        <LeaderboardMemberTimeline
-                            key={index}
-                            memberNumber={index}
-                            memberUsername={member.username}
-                            memberStatus={member.status}
-                        />
-                    ))}    
-                </div>
+            
             </div>
         </AuditLeaderboardContext.Provider>
     );

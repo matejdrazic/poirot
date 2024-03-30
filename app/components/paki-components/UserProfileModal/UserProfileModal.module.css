@@ -19,8 +19,8 @@
     display: flex;
     flex-direction: column;
     background-color: #1C0333;
-    padding: 10px 40px 10px 40px;
-    width: 70%;
+    padding: 10px 40px 50px 40px;
+    width: 50%;
     height: 80%;
     /* rgb(red, green, blue, opacity); */
     box-shadow: 10px -10px 0px 0px rgb(102, 29, 170);
@@ -48,7 +48,8 @@
 
 .UserProfileContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .UserProfileFirstSection {
@@ -70,14 +71,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
     align-self: center;
-    margin-right: 120px;
 }
 
 .UserProfileProfilePhoto{
     height: 200px;
     width: 200px;
     align-self: center;
-    margin-right: 70px;
 }
 
 .UserProfileUsername {
@@ -85,7 +84,6 @@
     color: white;
     font-weight: 700;
     align-self: center;
-    margin-right: 70px;
 }
 
 .UserProfileRole {
@@ -96,14 +94,13 @@
     align-self: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 70px;
 }
 
 
 .UserProfileStats {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
 }
 
 .UserProfileIssuesStatsSection {
