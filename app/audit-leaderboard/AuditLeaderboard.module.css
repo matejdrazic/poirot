@@ -9,6 +9,23 @@
     padding: 100px 100px 0px 100px;
 }
 
+.AuditLeaderboardTopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TopBarUser {
+    display: flex;
+    flex-direction: row;
+    flex : 1;
+}
+
+.TopBarElement {
+    flex : 1;
+}
+
+
 .AuditLeaderboardList {
     display: flex;
     flex-direction: column;
@@ -33,9 +50,5 @@
     outline: #3A0866 solid 2px;
 }
 
-.AuditLeaderboardTopBar {
-    display: flex;
-    flex-direction: row;
-}
 
 

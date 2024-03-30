@@ -12,6 +12,7 @@ import { TimelineData } from './AuditLeaderboardTimelineData.js'
 
 // my components
 import LeaderboardMember from "@/components/paki-components/LeaderboardMember/LeaderboardMember";
+import LeaderboardTopBar from "@/components/paki-components/LeaderboardTopBar/LeaderboardTopBar";
 import LeaderboardMemberTimeline from "@/components/paki-components/LeaderboardMemberTimeline/LeaderboardMemberTimeline";
 import UserProfileModal from "@/components/paki-components/UserProfileModal/UserProfileModal"
 
@@ -41,8 +42,7 @@ const AuditLeaderboard = () => {
 
                 <div className={Style.AuditLeaderboardList}>
                     <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>AUDIT LEADERBOARD</h2>
-                    <div className={Style.AuditLeaderboardTopBar}>
-                    </div>
+                    <LeaderboardTopBar />
                     {Data.map((member, index) => (
                         <LeaderboardMember
                             key={index}

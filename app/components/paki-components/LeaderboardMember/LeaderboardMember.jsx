@@ -20,9 +20,9 @@ const LeaderboardMember = ({ memberNumber, memberProfilePhoto, memberUsername, m
     return (  
         <button onClick={() => handleOpenUserProfile()} className={Style.LeaderboardMemberContainer}>
             <div className={Style.LeaderboardMemberInfo}>
-                <div className={Style.LeaderboardMemberInfoMember} style={{marginRight:"20px"}}>{memberNumber}</div>
+                <div className={Style.LeaderboardMemberInfoElement} style={{marginRight:"5px"}}>{memberNumber}</div>
                 <img className={Style.LeaderboardMemberInfoProfilePhoto} src={memberProfilePhoto}></img>
-                <div className={Style.LeaderboardMemberInfoMember}>{memberUsername}</div>
+                <div className={Style.LeaderboardMemberInfoElement}>{memberUsername}</div>
             </div>
             <div className={Style.LeaderboardMemberInfoMember}>{memberPoints}</div>
             <div className={Style.LeaderboardMemberInfoMember}>{memberDays}</div>
