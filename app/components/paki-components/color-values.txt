@@ -1,0 +1,11 @@
+// black
+#010009
+
+// green
+#095537
+
+// dark green
+#053221
+
+// light green
+#8DC1B1

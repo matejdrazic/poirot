@@ -11,11 +11,15 @@ import { AuditLeaderboardContext } from '../../../audit-leaderboard/AuditLeaderb
 
 // my components
 import UserProfileStatsElement from './UserProfileComponents/UserProfileStatsElement/UserProfileStatsElement'
+import UserProfileRewards from './UserProfileComponents/UserProfileRewards/UserProfileRewards'
+import topLeader from '../Resources/top_leader.png'
+import achievement1 from '../Resources/achievements/achievement1.png'
+
 
 const data = {
         profilePhoto : "/one.png",
-        username : "username",
-        role : "senior",
+        username : "DarkChocolate",
+        role : "Senior Watson",
         stats : [
             {
                 highSeverity : "4",
@@ -47,9 +51,9 @@ const ModalUpdateProjectInfo = () => {
                     <div className={Style.UserProfileFirstSection}>
                         <img src={data.profilePhoto} className={Style.UserProfileProfilePhoto} />
                         <div className={Style.UserProfileUsername}>{data.username}</div>
-                        <div className={Style.UserProfileRole}>senior</div>
+                        <div className={Style.UserProfileRole}>{data.role}</div>
                         <div className={Style.UserProfileIssues}>
-                            <div className={Style.UserProfileRecentIssues}>Recent issues</div>
+                            <div className={Style.UserProfileRecentIssues}>STATS</div>
                             <div className={Style.UserProfileStats}>
                                 <div className={Style.UserProfileIssuesStatsSection}>
                                     <UserProfileStatsElement title={"High Severity Issues"} value={"5"}/>
@@ -62,8 +66,22 @@ const ModalUpdateProjectInfo = () => {
                                     <UserProfileStatsElement title={"First Place"} value={"9"}/>
                                 </div>
                             </div>
-                            <div style={Style.UserProfileRewards}>213</div>
-                            <div style={Style.UserProfileTopResults}>TOP LEADER</div>
+                            <UserProfileRewards value={"288.69K €"}/>
+                            <div style={Style.UserProfileTopResults}>Top Results</div>
+
+                            <div className={Style.UserProfileStats}>
+                                <div className={Style.UserProfileIssuesStatsSection}>
+                                    <UserProfileStatsElement title={"High Severity Issues"} value={"5"}/>
+                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"7"}/>
+                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"8"}/>
+                                </div>
+                                <div className={Style.UserProfileIssuesStatsSection}>
+                                    <UserProfileStatsElement title={"Solo High"} value={"3"}/>
+                                    <UserProfileStatsElement title={"Solo Medium"} value={"3"}/>
+                                    <UserProfileStatsElement title={"First Place"} value={"9"}/>    
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -71,7 +89,7 @@ const ModalUpdateProjectInfo = () => {
                         <div style={Style.UserProfileMilestones}>
                             <div style={Style.UserProfileMilestone}></div>
                         </div>
-
+                        <img src={achievement1} height={200} width={200}/>
                         <div className={Style.UserProfileResume}>
                             <div>Event</div>
                         </div>

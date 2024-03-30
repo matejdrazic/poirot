@@ -19,14 +19,18 @@
     display: flex;
     flex-direction: column;
     background-color: #1C0333;
-    padding: 10px 20px 10px 20px;
-    width: 60%;
+    padding: 10px 40px 10px 40px;
+    width: 70%;
     height: 80%;
     /* rgb(red, green, blue, opacity); */
-    box-shadow: 6px -6px 0px 0px rgb(102, 29, 170);
+    box-shadow: 10px -10px 0px 0px rgb(102, 29, 170);
     overflow-y: auto;
-    overflow: hidden;
 
+}
+
+/* REMOVING SCROLLBAR */
+.Modal::-webkit-scrollbar {
+    display: none;
 }
 
 .ModalTopBar {
@@ -58,16 +62,22 @@
 .UserProfileIssues {
     display: flex;
     flex-direction: column;
+    color: #b1b1b1;
+    font-weight: bold;
 }
 
 .UserProfileRecentIssues {
-
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+    margin-right: 120px;
 }
 
 .UserProfileProfilePhoto{
     height: 200px;
     width: 200px;
     align-self: center;
+    margin-right: 70px;
 }
 
 .UserProfileUsername {
@@ -75,6 +85,7 @@
     color: white;
     font-weight: 700;
     align-self: center;
+    margin-right: 70px;
 }
 
 .UserProfileRole {
@@ -83,32 +94,30 @@
     border-radius: 15px;
     text-align: center;
     align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 70px;
 }
 
 
 .UserProfileStats {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .UserProfileIssuesStatsSection {
     flex : 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-right: 10px;
 }
 
-.UserProfileIssuesStatsElement {
-    align-self: flex-start;
-}
 
-.UserProfileIssuesStatsElementTitle {
-    font-size: 0.8em;
-    font-weight: bold;
-    color: #D1D5DB;
-}
 
 .UserProfileSecondSection {
-    flex : 3;
+    flex : 2.5;
     display: flex;
     flex-direction: column;
     height: 100%;

@@ -1,15 +1,11 @@
-.UserProfileIssuesStatsElement {
-    align-self: flex-start;
-}
-
-.UserProfileIssuesStatsElementTitle {
+.UserProfileRewardsTitle {
     font-size: 0.85em;
     width: auto;
     font-weight: bold;
     color: #b1b1b1;
 }
 
-.UserProfileIssuesStatsElementValue{
+.UserProfileRewardsValue {
     color: #8716E8;
     font-weight: bold;
     font-size: 1.5em;
