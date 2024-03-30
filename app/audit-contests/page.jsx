@@ -8,60 +8,97 @@ const AuditContest = () => {
     <>
       <div>
         <div className={Styles.AuditContestWrapper}>
-          <h1>Active</h1>
-          <Audit
-            contest="Contest"
-            rewards="Rewards"
-            started="Started"
-            ends="Ends"
-          />
-          {dummyAudits.active.map((audit, index) => (
-            <Link href={"/audit-contests/" + audit.id}>
+          <div>
+            <div className={Styles.sectionWrapper}>
+              <h1>Active</h1>
+              <hr className={Styles.divider} />
               <Audit
-                key={index}
-                contest={audit.contest}
-                rewards={audit.rewards}
-                started={audit.started}
-                ends={audit.ends}
+                contest="Contest"
+                rewards="Rewards"
+                started="Started"
+                ends="Ends"
               />
-            </Link>
-          ))}
-          <h1>Upcoming</h1>
-          <Audit
-            contest="Contest"
-            rewards="Rewards"
-            started="Starts"
-            ends="Ends"
-          />
-          {dummyAudits.upcoming.map((audit, index) => (
-            <Link href={"/audit-contests/" + audit.id}>
+              {dummyAudits.map((audit, index) => (
+                audit.status === "active" && (
+                  <div>
+                    <hr className={Styles.divider} />
+                    <Link href={"/audit-contests/" + audit.id}>
+                      <Audit
+                        className={Styles.audit}
+                        key={index}
+                        contest={audit.contest}
+                        description={audit.description}
+                        rewards={audit.rewards}
+                        started={audit.started}
+                        ends={audit.ends}
+                      />
+                    </Link>
+                  </div>
+                )
+              ))}
+              <hr className={Styles.divider} />
+            </div>
+            <div className={Styles.sectionWrapper}>
+              <h1>Completed</h1>
+              <hr className={Styles.divider} />
               <Audit
-                key={index}
-                contest={audit.contest}
-                rewards={audit.rewards}
-                started={audit.started}
-                ends={audit.ends}
+                contest="Contest"
+                description
+                rewards="Rewards"
+                started="Started"
+                ends="Ended"
               />
-            </Link>
-          ))}
-          <h1>Completed</h1>
-          <Audit
-            contest="Contest"
-            rewards="Rewards"
-            started="Started"
-            ends="Ended"
-          />
-          {dummyAudits.completed.map((audit, index) => (
-            <Link href={"/audit-contests/" + audit.id}>
-              <Audit
-                key={index}
-                contest={audit.contest}
-                rewards={audit.rewards}
-                started={audit.started}
-                ends={audit.ends}
-              />
-            </Link>
-          ))}
+              {dummyAudits.map((audit, index) => (
+                audit.status === "completed" && (
+                  <div>
+                    <hr className={Styles.divider} />
+                    <Link href={"/audit-contests/" + audit.id}>
+                      <Audit
+                        className={Styles.audit}
+                        key={index}
+                        contest={audit.contest}
+                        description={audit.description}
+                        rewards={audit.rewards}
+                        started={audit.started}
+                        ends={audit.ends}
+                      />
+                    </Link>
+                  </div>
+                )
+              ))}
+              <hr className={Styles.divider} />
+            </div>
+          </div>
+          <div className={Styles.sectionWrapper} id={Styles.upcoming}>
+            <h1>Upcoming</h1>
+            <hr className={Styles.divider} />
+            <Audit
+              contest="Contest"
+              description=""
+              rewards="Rewards"
+              started="Starts"
+              ends="Ends"
+            />
+            {dummyAudits.map((audit, index) => (
+              audit.status === "upcoming" && (
+                <div>
+                  <hr className={Styles.divider} />
+                  <Link href={"/audit-contests/" + audit.id}>
+                    <Audit
+                      className={Styles.audit}
+                      key={index}
+                      contest={audit.contest}
+                      description={audit.description}
+                      rewards={audit.rewards}
+                      started={audit.started}
+                      ends={audit.ends}
+                    />
+                  </Link>
+                </div>
+              )
+            ))}
+            <hr className={Styles.divider} />
+          </div>
         </div>
       </div>
     </>

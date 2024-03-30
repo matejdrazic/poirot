@@ -1,18 +1,39 @@
 .AuditContestWrapper{
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
     height: 100%;
     padding: 20px;
 }
 
-.Audit{
+.audit{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding: 20px;
+}
+
+.sectionWrapper{
+    border: solid 1px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+#upcoming{
+    justify-content: left;
+}
+
+.divider{
+    width: 100%;
+    border-top: 3px solid #000;
+    border-radius: 5px;
 }

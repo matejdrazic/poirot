@@ -1,0 +1,9 @@
+.AuditDetailsContainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.divider{
+    width: 100%;
+    border-top: 3px solid #000;
+    border-radius: 5px;
+}
