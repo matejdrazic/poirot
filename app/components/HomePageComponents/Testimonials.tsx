@@ -40,7 +40,7 @@ export default function Testimonials() {
   )
   return (
     <>
-    <div className="mt-16 flex flex-col items-center justify-center">
+    <div className="mt-16 flex flex-col items-center justify-center mt-64">
       <h1 className="mb-4 ml-4 bg-gradient-to-r from-indigo-800 to-purple-400 font-bold inline-block text-transparent bg-clip-text text-6xl">Hear from our Customers</h1>
       <p className="text-center text-3xl my-12 font-bold">Customers who entrust their security to Poirot</p>
     </div>

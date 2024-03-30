@@ -17,7 +17,7 @@ export default function FrequentlyAsked() {
   return (
     <>
       <div className="flex flex-row gap-4">
-        <p className="text-2xl mx-4 font-bold mb-12">Find out more about Poirot</p>
+        <p className="text-2xl mx-4 font-bold mb-12 mt-1">Find out more about Poirot</p>
         <Button variant="outline" size="icon">
           <ChevronRight className="h-4 w-4" />
         </Button>

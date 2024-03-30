@@ -100,9 +100,9 @@ const Hero = () => {
               <div className="lg:ml-auto lg:text-right">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                   <img
-                    src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
+                    src="https://media.discordapp.net/attachments/1222602822462345270/1222603396649980026/IMG_2121.jpg?ex=6616d124&is=66045c24&hm=cbaf95f21327feed1a41e7a24ce32072ced9800238c3628278b60da6afbdb494&=&format=webp&width=838&height=1118"
                     alt="hero"
-                    className="max-w-full lg:ml-auto"
+                    className="w-9/12 lg:ml-auto"
                   />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
