@@ -18,22 +18,130 @@
 .Modal {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #1C0333;
-    width: 60%;
+    padding: 20px 40px 50px 40px;
+    width: 50%;
     height: 80%;
-    border-radius: 15px;
-    padding: 20px;
+    /* rgb(red, green, blue, opacity); */
+    box-shadow: 10px -10px 0px 0px rgb(102, 29, 170);
+    overflow-y: auto;
+
+}
+
+/* REMOVING SCROLLBAR */
+.Modal::-webkit-scrollbar {
+    display: none;
 }
 
 .ModalTopBar {
+    position: sticky;
+    top: 0;
+    z-index: 1001; /* Ensure it's above the modal content */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
 }
 
 .CloseModal {
     color: #ffffff;
     font-weight: bold;
+    font-size: 1.25em;
 }
 
+/* USER PROFILE ELEMENTS */
+
+.UserProfileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.UserProfileFirstSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.UserProfileIssues {
+    display: flex;
+    flex-direction: column;
+    color: #b1b1b1;
+    font-weight: bold;
+    width: 100%;
+}
+
+.UserProfileStatsTitle {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    align-self: center;
+}
+
+.UserProfileProfilePhoto{
+    height: 200px;
+    width: 200px;
+    align-self: center;
+}
+
+.UserProfileUsername {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    align-self: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.UserProfileRole {
+    background-color: #9B3BF2;
+    padding: 3px 20px 3px 20px;
+    border-radius: 20px;
+    text-align: center;
+    align-self: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+.UserProfileStats {
+    display: flex;
+    flex-direction: row;
+}
+
+.UserProfileIssuesStatsSection {
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 80px 10px 80px;
+}
+
+.UserProfileSecondSection {
+    flex : 2.5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.UserProfileAchievementsTitle {
+    margin-bottom: 10px;
+    color : #b1b1b1;
+    font-size: 20px;
+}
+
+.UserProfileAchievementsList {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px 5px 10px 5px;
+}
+
+.UserProfileAchievementsListImage {
+    margin: 0px 10px 0px 10px;
+}

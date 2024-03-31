@@ -1,5 +1,6 @@
 'use client'
 
+
 import React, { useState, useEffect } from "react";
 
 // style
@@ -7,12 +8,15 @@ import Style from './AuditLeaderboard.module.css'
 
 // data
 import { Data } from './AuditLeaderboardData.js'
+import { newData } from './AuditLeaderboardData.js'
 import { TimelineData } from './AuditLeaderboardTimelineData.js'
 
 // my components
 import LeaderboardMember from "@/components/paki-components/LeaderboardMember/LeaderboardMember";
+import LeaderboardTopBar from "@/components/paki-components/LeaderboardTopBar/LeaderboardTopBar";
 import LeaderboardMemberTimeline from "@/components/paki-components/LeaderboardMemberTimeline/LeaderboardMemberTimeline";
 import UserProfileModal from "@/components/paki-components/UserProfileModal/UserProfileModal"
+
 
 // context
 import  { AuditLeaderboardContext } from './AuditLeaderboardContext.js'
@@ -21,6 +25,7 @@ const AuditLeaderboard = () => {
 
     // user profile modal
     const [userProfileIsOpen, setUserProfileIsOpen] = useState(false);
+    const [selectedUserId, setSelectedUserId] = useState("");
 
     useEffect(() => {
         if (userProfileIsOpen) {
@@ -33,19 +38,22 @@ const AuditLeaderboard = () => {
     }, [userProfileIsOpen]);
 
     return (
-        <AuditLeaderboardContext.Provider value={{userProfileIsOpen, setUserProfileIsOpen}}>
+        <AuditLeaderboardContext.Provider value={{ userProfileIsOpen, setUserProfileIsOpen, selectedUserId, setSelectedUserId }}>
             <div className={Style.AuditLeaderboardContainer}>
                 
-                {userProfileIsOpen && <UserProfileModal />}
+                {userProfileIsOpen && <UserProfileModal userData={newData}/>}
+                
 
                 <div className={Style.AuditLeaderboardList}>
-                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>AUDIT LEADERBOARD</h2>
-                    <div className={Style.AuditLeaderboardTopBar}>
-                    </div>
-                    {Data.map((member, index) => (
+    
+
+                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#000000"}}>AUDIT LEADERBOARD</h2>
+                    <LeaderboardTopBar />
+                    {newData.map((member, index) => (
                         <LeaderboardMember
                             key={index}
                             memberNumber={index + 1}
+                            userId={index}
                             memberUsername={member.username}
                             memberProfilePhoto={member.image} 
                             memberPoints={member.points} 
@@ -55,19 +63,7 @@ const AuditLeaderboard = () => {
                     ))}    
                     
                 </div>      
-                <div className={Style.AuditLeaderboardTimeline}>
-                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>TIMELINE</h2>
-                    <div className={Style.AuditLeaderboardTopBar}>
-                    </div>
-                    {TimelineData.map((member, index) => (
-                        <LeaderboardMemberTimeline
-                            key={index}
-                            memberNumber={index}
-                            memberUsername={member.username}
-                            memberStatus={member.status}
-                        />
-                    ))}    
-                </div>
+            
             </div>
         </AuditLeaderboardContext.Provider>
     );

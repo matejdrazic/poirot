@@ -4,7 +4,9 @@
     justify-content: space-between;
     padding: 8px 15px 8px 15px;
     margin: 10px 0px 10px 0;
-    background-color: #280745;
+    outline: black solid 1px;
+    border-radius: 25px;
+    align-items: center;
 }
 
 .LeaderboardMemberContainer:hover {
@@ -16,16 +18,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
+    justify-self: flex-start;
+    flex : 1;
+}
+
+.LeaderboardMemberInfoElement {
+    margin-right: 20px;
 }
 
 .LeaderboardMemberInfoMember {
-    margin-left: 4px;
-    color: white;
-    margin-right: 4px;
+    flex : 1;
 }
 
 .LeaderboardMemberInfoProfilePhoto {
     height: 50px;
     width: 50x;
+    margin-right: 20px;
+    margin-left: 20px;
 }
