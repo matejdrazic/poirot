@@ -17,7 +17,6 @@ import LeaderboardTopBar from "@/components/paki-components/LeaderboardTopBar/Le
 import LeaderboardMemberTimeline from "@/components/paki-components/LeaderboardMemberTimeline/LeaderboardMemberTimeline";
 import UserProfileModal from "@/components/paki-components/UserProfileModal/UserProfileModal"
 
-import TestTailwind from '../components/paki-components/TestTailwind'
 
 // context
 import  { AuditLeaderboardContext } from './AuditLeaderboardContext.js'
