@@ -1,23 +1,39 @@
 .AuditLeaderboardContainer {
     display: flex;
     flex-direction: row;
-    background-color: #210938;
     width: 100%;
     height: 100%;
     padding-top: 40px;
+    color: #000000;
+    padding: 0px 100px 300px 100px;
+    font-family: "Instrument Sans", sans-serif;
 }
+
+.AuditLeaderboardTopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TopBarUser {
+    display: flex;
+    flex-direction: row;
+    flex : 1;
+}
+
+.TopBarElement {
+    flex : 1;
+}
+
 
 .AuditLeaderboardList {
     display: flex;
     flex-direction: column;
-    flex: 1.5;
-    background-color: #1C0333;
-    margin: 10px;
+    flex: 2.5;
+    margin: 10px 40px 10px 40px;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
-    padding: 40px 30px 5px 30px;
-    outline: #3A0866 solid 2px;
+    padding: 20px 30px 5px 30px;
 }
 
 .AuditLeaderboardTimeline {
@@ -25,17 +41,12 @@
     flex-direction: column;
     flex: 1.5;
     background-color: #1C0333;
-    margin: 10px;
+    margin: 10px 40px 10px 20px;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
     padding: 40px 30px 5px 30px;
     outline: #3A0866 solid 2px;
 }
 
-.AuditLeaderboardTopBar {
-    display: flex;
-    flex-direction: row;
-}
 
 
