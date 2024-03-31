@@ -23,26 +23,9 @@ import Image from "next/image";
 import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
 
 
-const data = {
-        profilePhoto : "/one.png",
-        username : "DarkChocolate",
-        role : "Senior Watson",
-        stats : [
-            {
-                highSeverity : "4",
-                mediumSeverityIssues: "5",
-                top3Places : "1",
-                soloHigh : "2",
-                soloMedium : "2",
-                firstPlace : "1"
-            }
-        ],
-        rewards : "81.4$"
-}
+const ModalUpdateProjectInfo = ( {userData, index} ) => {
 
-const ModalUpdateProjectInfo = () => {
-
-    const { userProfileIsOpen , setUserProfileIsOpen } = useContext(AuditLeaderboardContext);
+    const { userProfileIsOpen , setUserProfileIsOpen, selectedUserId } = useContext(AuditLeaderboardContext);
 
     const closeModal = () => {
         setUserProfileIsOpen(false);
@@ -56,59 +39,35 @@ const ModalUpdateProjectInfo = () => {
                 </div>
                 <div className={Style.UserProfileContainer}>
                     <div className={Style.UserProfileFirstSection}>
-                        <img src={data.profilePhoto} className={Style.UserProfileProfilePhoto} />
-                        <div className={Style.UserProfileUsername}>{data.username}</div>
-                        <div className={Style.UserProfileRole}>{data.role}</div>
+                        <img src={userData[selectedUserId].image} className={Style.UserProfileProfilePhoto} />
+                        <div className={Style.UserProfileUsername}>{userData[selectedUserId].username}</div>
+                        <div className={Style.UserProfileRole}>{userData[selectedUserId].role}</div>
                         <div className={Style.UserProfileIssues}>
-                            <div className={Style.UserProfileRecentIssues}>STATS</div>
+                            <div className={Style.UserProfileStatsTitle}>STATS</div>
                             <div className={Style.UserProfileStats}>
                                 <div className={Style.UserProfileIssuesStatsSection}>
-                                    <UserProfileStatsElement title={"High Severity Issues"} value={"5"}/>
-                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"7"}/>
-                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"8"}/>
+                                    <UserProfileStatsElement title={"High Severity Issues"} value={userData[selectedUserId].stats.highSeverityIssues}/>
+                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={userData[selectedUserId].stats.mediumSeverityIssues}/>
+                                    <UserProfileStatsElement title={"Low Severity Issues"} value={userData[selectedUserId].stats.lowSeverityIssues}/>
                                 </div>
                                 <div className={Style.UserProfileIssuesStatsSection}>
-                                    <UserProfileStatsElement title={"Solo High"} value={"3"}/>
-                                    <UserProfileStatsElement title={"Solo Medium"} value={"3"}/>
-                                    <UserProfileStatsElement title={"First Place"} value={"9"}/>
+                                    <UserProfileStatsElement title={"Solo High"} value={userData[selectedUserId].stats.soloHigh}/>
+                                    <UserProfileStatsElement title={"Solo Medium"} value={userData[selectedUserId].stats.soloMedium}/>
+                                    <UserProfileStatsElement title={"First Place"} value={userData[selectedUserId].stats.soloLow}/>
                                 </div>
                             </div>
                             <UserProfileRewards value={"288.69K €"}/>
                             <div style={Style.UserProfileTopResults}>Top Results</div>
-
-                            <div className={Style.UserProfileStats}>
-                                <div className={Style.UserProfileIssuesStatsSection}>
-                                    <UserProfileStatsElement title={"High Severity Issues"} value={"5"}/>
-                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"7"}/>
-                                    <UserProfileStatsElement title={"Medium Severity Issues"} value={"8"}/>
-                                </div>
-                                <div className={Style.UserProfileIssuesStatsSection}>
-                                    <UserProfileStatsElement title={"Solo High"} value={"3"}/>
-                                    <UserProfileStatsElement title={"Solo Medium"} value={"3"}/>
-                                    <UserProfileStatsElement title={"First Place"} value={"9"}/>    
-                                </div>
-                            </div>
                             
                         </div>
                     </div>
 
                     <div className={Style.UserProfileSecondSection}>
-                        <div className={Style.UserProfileAchievementsTitle}>ACHIEVEMENTS</div>
+                        <div className={Style.UserProfileAchievementsTitle}>Achievements</div>
                         <div className={Style.UserProfileAchievementsList}>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement2} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement4} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement4} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement2} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement1} width={150} height={150}/>
-                            <Image className={Style.UserProfileAchievementsListImage} src={achievement3} width={150} height={150}/>
-                        </div>
-                        <div className={Style.UserProfileResume}>
-                            <div>Event</div>
+                            {userData[selectedUserId].achievements.map((achievementPath, index) => (
+                                <Image style={{marginLeft: "10px", marginRight: "10px"}} key={index} className={Style.UserProfileAchievementsListImage} src={achievementPath} width={100} height={100}/>
+                            ))}
                         </div>
                     </div>
                 </div>

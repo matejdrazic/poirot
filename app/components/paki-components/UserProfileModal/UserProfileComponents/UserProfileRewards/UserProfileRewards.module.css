@@ -1,8 +1,9 @@
 .UserProfileRewardsTitle {
-    font-size: 0.85em;
+    font-size: 1em;
     width: auto;
     font-weight: bold;
     color: #b1b1b1;
+    margin : 10px 0px 10px 0px;
 }
 
 .UserProfileRewardsValue {

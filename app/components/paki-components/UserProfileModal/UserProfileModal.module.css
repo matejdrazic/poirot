@@ -68,10 +68,10 @@
     align-items: center;
 }
 
-.UserProfileRecentIssues {
+.UserProfileStatsTitle {
     margin-top: 20px;
-    margin-bottom: 20px;
-    align-self: center;
+    margin-bottom: 15px;
+    font-size: 1.3em;
 }
 
 .UserProfileProfilePhoto{
@@ -85,6 +85,8 @@
     color: white;
     font-weight: 700;
     align-self: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .UserProfileRole {
@@ -93,15 +95,14 @@
     border-radius: 15px;
     text-align: center;
     align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
 .UserProfileStats {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 .UserProfileIssuesStatsSection {
@@ -122,12 +123,15 @@
 
 .UserProfileAchievementsTitle {
     margin-bottom: 10px;
+    color : #b1b1b1;
+    font-size: 20px;
 }
 
 .UserProfileAchievementsList {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
+        padding: 10px 5px 10px 5px;
 }
 
 .UserProfileAchievementsListImage {

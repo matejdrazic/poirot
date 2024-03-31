@@ -8,6 +8,7 @@ import Style from './AuditLeaderboard.module.css'
 
 // data
 import { Data } from './AuditLeaderboardData.js'
+import { newData } from './AuditLeaderboardData.js'
 import { TimelineData } from './AuditLeaderboardTimelineData.js'
 
 // my components
@@ -16,13 +17,16 @@ import LeaderboardTopBar from "@/components/paki-components/LeaderboardTopBar/Le
 import LeaderboardMemberTimeline from "@/components/paki-components/LeaderboardMemberTimeline/LeaderboardMemberTimeline";
 import UserProfileModal from "@/components/paki-components/UserProfileModal/UserProfileModal"
 
+import TestTailwind from '../components/paki-components/TestTailwind'
+
 // context
 import  { AuditLeaderboardContext } from './AuditLeaderboardContext.js'
 
 const AuditLeaderboard = () => {
 
     // user profile modal
-    const [userProfileIsOpen, setUserProfileIsOpen] = useState(true);
+    const [userProfileIsOpen, setUserProfileIsOpen] = useState(false);
+    const [selectedUserId, setSelectedUserId] = useState("");
 
     useEffect(() => {
         if (userProfileIsOpen) {
@@ -35,18 +39,22 @@ const AuditLeaderboard = () => {
     }, [userProfileIsOpen]);
 
     return (
-        <AuditLeaderboardContext.Provider value={{userProfileIsOpen, setUserProfileIsOpen}}>
+        <AuditLeaderboardContext.Provider value={{ userProfileIsOpen, setUserProfileIsOpen, selectedUserId, setSelectedUserId }}>
             <div className={Style.AuditLeaderboardContainer}>
                 
-                {userProfileIsOpen && <UserProfileModal />}
+                {userProfileIsOpen && <UserProfileModal userData={newData}/>}
+                
 
                 <div className={Style.AuditLeaderboardList}>
+    
+
                     <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>AUDIT LEADERBOARD</h2>
                     <LeaderboardTopBar />
-                    {Data.map((member, index) => (
+                    {newData.map((member, index) => (
                         <LeaderboardMember
                             key={index}
                             memberNumber={index + 1}
+                            userId={index}
                             memberUsername={member.username}
                             memberProfilePhoto={member.image} 
                             memberPoints={member.points} 

@@ -9,11 +9,15 @@ import { AuditLeaderboardContext } from '../../../audit-leaderboard/AuditLeaderb
 
 // Define an interface for the props
 
-const LeaderboardMember = ({ memberNumber, memberProfilePhoto, memberUsername, memberPoints, memberDays, memberPayouts }) => {
+const LeaderboardMember = ({ userId, memberNumber, memberProfilePhoto, memberUsername, memberPoints, memberDays, memberPayouts }) => {
     
-    const { userProfileIsOpen , setUserProfileIsOpen } = useContext(AuditLeaderboardContext);
+    const { userProfileIsOpen , setUserProfileIsOpen, selectedUserId, setSelectedUserId } = useContext(AuditLeaderboardContext);
     
     const handleOpenUserProfile = () => {
+
+        // set selected user index so correct data can be taken
+        setSelectedUserId(userId);
+        
         setUserProfileIsOpen(true);
     }
 
