@@ -1,9 +1,14 @@
+.UserProfileRewardsContainer {
+    align-self: center;
+    align-items: center;
+}
+
 .UserProfileRewardsTitle {
-    font-size: 1em;
+    font-size: 1.2em;
     width: auto;
     font-weight: bold;
     color: #b1b1b1;
-    margin : 10px 0px 10px 0px;
+    margin-left: 20px;
 }
 
 .UserProfileRewardsValue {
