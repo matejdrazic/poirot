@@ -47,7 +47,7 @@ const AuditLeaderboard = () => {
                 <div className={Style.AuditLeaderboardList}>
     
 
-                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#ffffff"}}>AUDIT LEADERBOARD</h2>
+                    <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#000000"}}>AUDIT LEADERBOARD</h2>
                     <LeaderboardTopBar />
                     {newData.map((member, index) => (
                         <LeaderboardMember
