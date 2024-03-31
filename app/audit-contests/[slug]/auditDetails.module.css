@@ -1,4 +1,51 @@
-.AuditDetailsContainer{
+.AuditDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-column-gap: 150px;
+  }
+  
+
+.QuestionsContainer{
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
+
+.QuestionsContainer div{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+  .AuditDetailsContainer > div {
+    padding: 10px;
+  }
+  
+  .AuditDetailsContainer p {
+    margin: 5px 0;
+  }
+
+  .AuditDetailsContainer img{
+    width: 20%;
+    margin-bottom: 40px;
+    mix-blend-mode: color-burn;
+  }
+  
+  
+  .Question p:first-child {
+    font-weight: bold;
+  
+  }
+  
+  .ImportantInfo {
+    color: #FF5733;
+    font-weight: bold;
+  }
+  
+  .RightCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 25px;
+    height: 37%;
+    box-shadow: 1px 2px 1px rgb(206, 189, 189);
+
+  }

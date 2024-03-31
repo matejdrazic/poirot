@@ -1,12 +1,12 @@
 import styles from './Audit.module.css';
 
-const Audit = ({contest, description, rewards, started, ends}) => {
+const Audit = ({contest, description, rewards, started, ends, icon}) => {
     return (
         <div className={styles.Audit}>
-            <p>{contest}<br/>{description}</p>
-            <p>{rewards}</p>
-            <p>{started}</p>
-            <p>{ends}</p>
+            <p className='font-semibold text-lg'>{contest}<br/><br /></p>
+            <p className='font-semibold text-lg'>{rewards}</p>
+            <p className='font-semibold text-lg'>{started}</p>
+            <p className='font-semibold'>{ends}</p>
         </div>
     );
 }

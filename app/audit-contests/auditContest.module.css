@@ -1,34 +1,75 @@
-.AuditContestWrapper{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-}
-
-.audit{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 20px;
-}
-
-.sectionWrapper{
-    border: solid 1px #000;
+.AuditContestWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+  }
+  
+  .sectionWrapper {
+    border-radius: 25px;
+    margin-bottom: 120px;
+    padding: 20px;
     width: 100%;
-    height: 100%;
-    padding: 20px;
-}
+    max-width: 950px;
+  }
+  
+  .sectionWrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .audit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #bda9a9;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .audit:hover {
+    background-color: #eaeaea;
+  }
+  
+  .divider {
+    width: 100%;
+    border-bottom: 1px solid #6804e2;
+    margin: 10px 0;
+  }
+  
+  #upcoming {
+    align-items: flex-start;
+  }
+  
+  .individualAudit {
 
-#upcoming{
-    justify-content: left;
-}
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  
+  .individualAudit:hover {
+    background-color: #eaeaea;
+  }
+  .individualAudit aside img{
+      width: 10%;
+      margin-left: 50px;
+      margin-top: 20px;
+      mix-blend-mode: color-burn;
+  }
+
+
+  .header {
+    font-weight:bolder;
+    font-size: 1.25rem; /* Adjust size as needed */
+    color: #e80f0f; /* Adjust color as needed */
+    margin-bottom: 5px; /* Adjust margin as needed */
+  }
+  
