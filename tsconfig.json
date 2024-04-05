@@ -24,6 +24,6 @@
       "@/*": ["app/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/audit-leaderboard/page.jsx", "app/components/paki-components/UserProfileModal/UserProfileModal.jsx", "app/audit-contests/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/audit-leaderboard/page.jsx", "app/components/paki-components/UserProfileModal/UserProfileModal.jsx", "app/audit-contests/page.jsx", "app/components/HomePageComponents/Particles/ParticlesBackground.tsx", "app/audit-contests/[slug]/page.jsx"],
   "exclude": ["node_modules"]
 }

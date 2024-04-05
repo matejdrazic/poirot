@@ -99,6 +99,7 @@ const Hero = () => {
             <div className="w-full px-4 lg:w-6/12">
               <div className="lg:ml-auto lg:text-right">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
+                  {/*hero image*/}
                   <img
                   src="https://blog.mozilla.org/wp-content/blogs.dir/278/files/2019/05/cryptominer-firefox-1000x550.png"
                     alt="hero-image-right"

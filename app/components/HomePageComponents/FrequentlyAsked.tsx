@@ -23,14 +23,12 @@ export default function FrequentlyAsked() {
         </Button>
       </div>
       <div className="flex flex-col lg:flex-row-reverse gap-24">
-        <div className="flex flex-col items-center justify-evenly lg:w-6/12  mx-auto rounded-lg overflow-hidden bg-transparent">
-          <div className="flex flex-col items-center justify-center gap-4 w-fit">
-           
-          </div>
+        <div className="flex flex-col items-center justify-evenly  rounded-lg overflow-hidden bg-transparent">
+         
           <Image
             src={cirlcesScatter}
             alt="faq-design"
-            className="w-11/12"
+            className="w-10/12"
           />
         </div>
 
@@ -62,13 +60,13 @@ export default function FrequentlyAsked() {
               Yes. We ensure top safety.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4">
+          <AccordionItem value="item-5">
             <AccordionTrigger>Is it safe?</AccordionTrigger>
             <AccordionContent>
               Yes. We ensure top safety.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4">
+          <AccordionItem value="item-6">
             <AccordionTrigger>Is it safe?</AccordionTrigger>
             <AccordionContent>
               Yes. We ensure top safety.

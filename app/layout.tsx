@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <WalletProvider>
           <Header/>
-          <main className="min-h-screen p-16" style={{backgroundColor : "#ffffff"}}>
+          <main className="min-h-screen p-16">
             {children}
             <ToastContainer theme="colored" />
           </main>

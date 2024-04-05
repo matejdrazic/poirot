@@ -19,9 +19,9 @@ const AuditContest = () => {
           <h1>Active</h1>
           <AuditHeaders
             contest={<strong className={HeaderStyles.header}>Contest</strong>}
-            rewards={<strong className={HeaderStyles.header}>Rewards</strong>}
-            started={<strong className={HeaderStyles.header}>Started</strong>}
-            ends={<strong className={HeaderStyles.header}>Ends</strong>}
+            rewards={<strong className={HeaderStyles.header}>Total Rewards</strong>}
+            started={<strong className={HeaderStyles.header}>Started(UTC)</strong>}
+            ends={<strong className={HeaderStyles.header}>Ends(UTC)</strong>}
           />
           {dummyAudits.map((audit, index) => (
             audit.status === "active" && (
@@ -44,16 +44,16 @@ const AuditContest = () => {
               </React.Fragment>
             )
           ))}
-          {dummyAudits.filter(audit => audit.status === "active").length === 0 && <p>No audits yet</p>}
+          {dummyAudits.filter(audit => audit.status === "active").length === 0 && <p>No audits available</p>}
         </div>
         
         <div className={Styles.sectionWrapper}>
           <h1>Completed</h1>
           <AuditHeaders
             contest={<strong className={HeaderStyles.header}>Contest</strong>}
-            rewards={<strong className={HeaderStyles.header}>Rewards</strong>}
-            started={<strong className={HeaderStyles.header}>Started</strong>}
-            ends={<strong className={HeaderStyles.header}>Ended</strong>}
+            rewards={<strong className={HeaderStyles.header}>Total Rewards</strong>}
+            started={<strong className={HeaderStyles.header}>Started(UTC)</strong>}
+            ends={<strong className={HeaderStyles.header}>Ended(UTC)</strong>}
           />
           {dummyAudits.map((audit, index) => (
             audit.status === "completed" && (
@@ -76,16 +76,16 @@ const AuditContest = () => {
               </React.Fragment>
             )
           ))}
-          {dummyAudits.filter(audit => audit.status === "completed").length === 0 && <p>No audits yet</p>}
+          {dummyAudits.filter(audit => audit.status === "completed").length === 0 && <p>No audits available</p>}
         </div>
         
         <div className={Styles.sectionWrapper} id={Styles.upcoming}>
           <h1>Upcoming</h1>
           <AuditHeaders
             contest={<strong className={HeaderStyles.header}>Contest</strong>}
-            rewards={<strong className={HeaderStyles.header}>Rewards</strong>}
-            started={<strong className={HeaderStyles.header}>Starts</strong>}
-            ends={<strong className={HeaderStyles.header}>Ends</strong>}
+            rewards={<strong className={HeaderStyles.header}>Total Rewards</strong>}
+            started={<strong className={HeaderStyles.header}>Starts(UTC)</strong>}
+            ends={<strong className={HeaderStyles.header}>Ends(UTC)</strong>}
           />
           {dummyAudits.map((audit, index) => (
             audit.status === "upcoming" && (
@@ -109,7 +109,7 @@ const AuditContest = () => {
               </React.Fragment>
             )
           ))}
-          {dummyAudits.filter(audit => audit.status === "upcoming").length === 0 && <p>No audits yet</p>}
+          {dummyAudits.filter(audit => audit.status === "upcoming").length === 0 && <p>No audits available</p>}
         </div>
       </div>
     </>

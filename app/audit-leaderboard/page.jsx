@@ -37,6 +37,9 @@ const AuditLeaderboard = () => {
         }
     }, [userProfileIsOpen]);
 
+    const sortedData = newData.sort((a, b) => b.points - a.points);
+
+
     return (
         <AuditLeaderboardContext.Provider value={{ userProfileIsOpen, setUserProfileIsOpen, selectedUserId, setSelectedUserId }}>
             <div className={Style.AuditLeaderboardContainer}>
@@ -49,7 +52,7 @@ const AuditLeaderboard = () => {
 
                     <h2 style={{marginBottom:"30px", fontSize:"30px", color: "#000000"}}>AUDIT LEADERBOARD</h2>
                     <LeaderboardTopBar />
-                    {newData.map((member, index) => (
+                    {sortedData.map((member, index) => (
                         <LeaderboardMember
                             key={index}
                             memberNumber={index + 1}
