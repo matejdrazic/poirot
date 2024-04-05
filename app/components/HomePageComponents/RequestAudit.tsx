@@ -8,8 +8,8 @@ const RequestAudit = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
-    const numDots = 70;
-    const radius = 190;
+    const numDots = 100;
+    const radius = 200;
     let angle = 0;
 
     const drawDot = (x: number, y: number) => {

@@ -49,7 +49,7 @@
   .individualAudit {
 
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 25px;
     margin-bottom: 10px;
     width: 100%;
     background-color: #f9f9f9;
@@ -59,7 +59,7 @@
     background-color: #eaeaea;
   }
   .individualAudit aside img{
-      width: 10%;
+      width: 7%;
       margin-left: 50px;
       margin-top: 20px;
       mix-blend-mode: color-burn;

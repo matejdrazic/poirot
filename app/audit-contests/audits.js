@@ -17,7 +17,7 @@ const dummyAudits = [
         rewards: "1000 Ethereum",
         started: "2021-05-01 14:00",
         ends: "2021-05-31 22:00",
-        icon:"https://static.vecteezy.com/system/resources/thumbnails/003/659/087/small_2x/t-white-alphabet-letter-black-circle-company-business-logo-icon-design-corporate-vector.jpg"
+        icon:"https://www.graphicdesignforum.com/uploads/default/original/2X/7/74d0192b0d431435c749c3b9e633b996cd951be3.png"
     },
     // {   
     //     id: 3,

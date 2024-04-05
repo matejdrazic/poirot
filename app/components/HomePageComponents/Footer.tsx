@@ -100,13 +100,13 @@ const Footer = () => {
                 Useful links
                 </h6>
                 <p className="mb-4">
+                <a href="#!">Terms and Conditions</a>
+                </p>
+                <p className="mb-4">
+                <a href="#!">FAQ</a>
+                </p>
+                <p className="mb-4">
                 <a href="#!">Pricing</a>
-                </p>
-                <p className="mb-4">
-                <a href="#!">Settings</a>
-                </p>
-                <p className="mb-4">
-                <a href="#!">Orders</a>
                 </p>
                 <p>
                 <a href="#!">Help</a>
@@ -143,7 +143,7 @@ const Footer = () => {
                         d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                     </svg>
                 </span>
-                info@example.com
+                info@poirot.com
                 </p>
                 <p className="mb-4 flex items-center justify-center md:justify-start">
                 <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">

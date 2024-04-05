@@ -89,8 +89,8 @@ const AnimatedFeatures: React.FC = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
-    const numDots = 70;
-    const radius = 150;
+    const numDots = 100;
+    const radius = 200;
     let angle = 0;
 
     const drawDot = (x: number, y: number) => {
@@ -136,8 +136,8 @@ const AnimatedFeatures: React.FC = () => {
       <div style={{ position: 'relative', width: '400px', height: '400px' }}>
         <canvas ref={canvasRef} width={400} height={400} className='' />
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '20px', borderRadius: '8px' }}>
-            <div className='flex flex-col gap-8'>
-                <div className='flex flex-row gap-16'>
+            <div className='flex flex-col gap-24'>
+                <div className='flex flex-row gap-32'>
                     <Card>
                       <CardContent className="flex flex-col items-center justify-center p-6 w-40">
                         <LockIcon/>
@@ -153,7 +153,7 @@ const AnimatedFeatures: React.FC = () => {
                       </CardContent>
                     </Card>
                 </div>
-                <div className='flex flex-row gap-16'>
+                <div className='flex flex-row gap-32'>
                     <Card>
                       <CardContent className="flex flex-col items-center justify-center p-6 w-40">
                         <DonutIcon/>

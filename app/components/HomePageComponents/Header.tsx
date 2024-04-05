@@ -55,6 +55,11 @@ const Header = () => {
               <li>
                 <WalletMultiButton/>
               </li>
+              <Link href={"/request-audit"} className='bg-indigo-300 hover:bg-indigo-400 rounded-xl px-2 '>
+                <li className='mt-2 font-semibold '>
+                  Request Audit
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
